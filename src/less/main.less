@@ -2,16 +2,31 @@
 @import "lib/mixins/fontface";
 @import "src/fonts";
 
-.box-shadow(@style, @c) when (iscolor(@c)) {
-  -webkit-box-shadow: @style @c;
-  box-shadow:         @style @c;
+body {
+  display: flex;
+  flex-direction: column;
+
+  .masthead {
+    padding-top: 4.5rem !important;
+    padding-bottom: 4.5rem !important;
+    flex: 0 1 auto;
+    background: #3DB0AE !important;
+    text-align: left !important;
+
+    h1 {
+      font-size: 4rem;
+      color: #fcfcfc;
+    }
+  }
+
+  #typeform {
+    flex: 1 1 auto;
+    overflow: hidden;
+
+    // section {
+    //   height: 100%;
+    //   border: 1px solid #FC9A5B;
+    // }
+  }
 }
-.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
-  .box-shadow(@style, rgba(0, 0, 0, @alpha));
-}
-.box {
-  color: @base;
-  background-color: @base;
-  border-color: lighten(@base, 30%);
-  div { .box-shadow(0 0 5px, 30%) }
-}
+  

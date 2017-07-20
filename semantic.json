@@ -23,7 +23,9 @@
     "site",
     "button",
     "container",
+    "header",
     "icon",
+    "image",
     "segment"
   ],
   "version": "2.2.11"
